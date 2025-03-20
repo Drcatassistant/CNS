@@ -1,6 +1,6 @@
 ## EX. NO: 1(A) : IMPLEMENTATION OF CAESAR CIPHER
  
-
+## Date : 17-03-2025
 ## AIM:
 
 To implement the simple substitution technique named Caesar cipher using C language.
@@ -27,9 +27,9 @@ becomes C. To change a message back, each letter is replaced by the one three be
 ### STEP-5: Display the cipher text obtained above.
 
 
-## PROGRAM :-
+PROGRAM :-
 
-'''
+```
 
 #include <stdio.h>
 #include <string.h>
@@ -49,19 +49,16 @@ void main()
     printf("\n \n \t ENCRYPTED TEXT:");
     for(i=0, length = strlen(plain); i<length; i++)
     {
-        
         cipher[i]=plain[i] + key;
         if (isupper(plain[i]) && (cipher[i] > 'Z'))
         cipher[i] = cipher[i] - 26;
         if (islower(plain[i]) && (cipher[i] > 'z'))
         cipher[i] = cipher[i] - 26;
         printf("%c", cipher[i]);
-
     }
     printf("\n \n \t AFTER DECRYPTION : ");
     for(i=0;i<length;i++)
     {
-        
         plain[i]=cipher[i]-key;
         if(isupper(cipher[i])&&(plain[i]<'A'))
         plain[i]=plain[i]+26;
@@ -69,11 +66,10 @@ void main()
         plain[i]=plain[i]+26;
         printf("%c",plain[i]);
     }
-    getch();
-
-    
+    getch();  
 }
 
-'''
+```
+
 ## OUTPUT :-
 ![Screenshot 2025-03-20 091239](https://github.com/user-attachments/assets/f9051676-cc65-4e44-a1c3-102f7091d8ac)
